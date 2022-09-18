@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+header {
+    width: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: blueviolet;
+    padding: 10px 50px;
+    border-bottom: 2px solid #333;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.container .data {
+    width: 100%;
+    padding: 30px;
+}
+.container .data h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 40px;
+
+}
+.container .data > input {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.container .data > input:last-child {
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+}
+.container .data .dis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .data .dis input {
+    width: 48%;
+    background-color: #eee;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.data-name {
+    width: 100%;
+    padding: 30px;
+}
+.data-name .form {
+    position: relative;
+    display: flex;
+}
+.data-name .form input {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.data-name .form i {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    cursor: pointer;
+}
+.data-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding: 10px ;
+    text-align: center;
+}
+.data-type > div {
+    width: calc(95% / 7);
+}
+.data-type div div {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+.data-type.active {
+    background-color: #ccc;
+}
+.action div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.action div i {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error {
+    position: absolute;
+    width: fit-content;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%) scale(0);
+    opacity: 0;
+    transition: 0.5s;
+}
+.error.active-err {
+    transform: translate(-50% , -50%) scale(1);
+    opacity: 1;
+}
+.error .x {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* 
+
+Make this app Full Responsev
+
+*/
+
+@media (max-width: 991px) {
+
+    .data-type {
+        flex-wrap: wrap;
+    }
+    .data-type div {
+        width: calc(95% / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 0;
+
+    }
+
+    .data-type div div {
+        width: 100%;
+    }
+    .data-type div:not(.data-type div:last-child) {
+        border-bottom: 1px solid black;
+    }
+    .data-type  div:last-child  {
+        margin: 0px auto;
+    }
+    .data-type div div:last-child {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+}

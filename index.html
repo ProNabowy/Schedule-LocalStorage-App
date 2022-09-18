@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/nabowy.css" />
+    <title>Schedule</title>
+  </head>
+  <body>
+    <header>
+      <h2>ProNabowy</h2>
+    </header>
+    <div class="container">
+      <div class="data">
+        <h2>Create</h2>
+        <input type="text" class="inp-day" placeholder="Day" />
+        <div class="dis">
+          <input type="text" placeholder="Data" class="inp-date" />
+          <input type="number" class="inp-hours" placeholder="Hours" />
+        </div>
+        <input type="text" placeholder="Works For" class="inp-category" />
+        <input type="text" class="inp-type" placeholder="type" />
+        <input type="submit" value="Add" class="add" />
+      </div>
+      <div class="data-name">
+        <div class="form">
+          <i class="fa-solid fa-xmark"></i>
+          <input
+            type="text"
+            class="search"
+            placeholder="type Name Of Your Data"
+          />
+        </div>
+        <div class="set-data"></div>
+      </div>
+    </div>
+    <h2 class="error">
+      Hey You Should To Fill All Those inputs
+      <span class="x">X</span>
+    </h2>
+    <script src="main.js"></script>
+  </body>
+</html>
